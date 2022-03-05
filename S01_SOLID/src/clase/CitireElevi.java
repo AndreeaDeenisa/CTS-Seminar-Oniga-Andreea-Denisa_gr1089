@@ -17,14 +17,6 @@ public class CitireElevi implements CitireAplicanti{
 		while (scanner.hasNext()) {
 			Elev elev = new Elev();
 			AplicantReader.citireAplicant(scanner, elev);
-			String nume = scanner.next();
-			String prenume = scanner.next();
-			int varsta = scanner.nextInt();
-			int punctaj = scanner.nextInt();
-			int nr = scanner.nextInt();
-			String[] vect = new String[5];
-			for (int i = 0; i < nr; i++)
-				vect[i] = scanner.next();
 			int clasa = scanner.nextInt();
 			String tutore = scanner.next();
 			elev.setTutore(tutore);
