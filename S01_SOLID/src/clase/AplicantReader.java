@@ -17,6 +17,6 @@ public class AplicantReader {
 		aplicant.setPrenume(prenume);
 		aplicant.setVarsta(varsta);
 		aplicant.setPunctaj(punctaj);
-		aplicant.setDenumiriProiecte(nrProiecte,proiecte);
+		aplicant.setDenumiriProiecte(nrProiecte, proiecte);
 	}
 }

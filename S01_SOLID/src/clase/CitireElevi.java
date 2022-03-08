@@ -11,9 +11,16 @@ public class CitireElevi implements CitireAplicanti{
 	@Override
 	public List<Aplicant> citireAplicanti(String numeFisier) throws FileNotFoundException {
 		Scanner scanner = new Scanner(new File(numeFisier));
-		scanner.useDelimiter(",|\n");
-		List<Aplicant> elevi = new ArrayList<Aplicant>();
+		scanner.useDelimiter(",");
+		List<Aplicant> elevi = citireAplicantiDinScanner(scanner);
 
+		scanner.close();
+		return elevi;
+	}
+	
+	private List<Aplicant> citireAplicantiDinScanner(Scanner scanner) {
+		List<Aplicant> elevi = new ArrayList<>();
+		
 		while (scanner.hasNext()) {
 			Elev elev = new Elev();
 			AplicantReader.citireAplicant(scanner, elev);
@@ -23,8 +30,6 @@ public class CitireElevi implements CitireAplicanti{
 			elev.setClasa(clasa);
 			elevi.add(elev);
 		}
-
-		scanner.close();
 		return elevi;
 	}
 
