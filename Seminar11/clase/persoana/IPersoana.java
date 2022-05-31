@@ -1,4 +1,4 @@
-package teste;
+package persoana;
 
 public interface IPersoana {
 	public String getSex();
